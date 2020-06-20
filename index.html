@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-13 16:24:13
- * @LastEditTime: 2020-06-19 19:56:10
+ * @LastEditTime: 2020-06-19 21:28:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /git_person_site/index.html
@@ -16,13 +16,18 @@
 </head>
 
 <body>
-    <input type="number" placeholder='请输入一个整数'>
-    <button>点击输出</button>
+    <input type="number" placeholder='请输入一个整数' id="num">
+    <button id="btn">点击输出</button>
+    <h1></h1>
 
 </body>
-<script src=""></script>
+<script src="./js/myFunc.js"></script>
 <script>
-    console.log(digital_root(123));
+    document.getElementById('btn').onclick = function(e) {
+        console.time()
+        console.log(digital_root1(document.querySelector('#num').value));
+        console.timeEnd()
+    }
 </script>
 
 </html>
